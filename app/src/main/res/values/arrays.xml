@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="urgency_options">
+        <item>Standard (2–4 weeks)</item>
+        <item>Priority (1–2 weeks)</item>
+        <item>Emergency (within 1 week)</item>
+    </string-array>
+</resources>

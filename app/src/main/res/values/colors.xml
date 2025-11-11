@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brandBlueDark">#133C73</color>
+    <color name="brandBlue">#1E4D86</color>
+    <color name="brandBlueLight">#2E66AE</color>
+    <color name="cardWhite">#FFFFFF</color>
+    <color name="textDark">#222222</color>
+    <color name="textLight">#FFFFFF</color>
+    <color name="hintGrey">#9E9E9E</color>
+    <color name="buttonBlue">#1F4172</color>
+</resources>

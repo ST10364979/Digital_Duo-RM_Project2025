@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue_gradient">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_logo"
+            android:contentDescription="@string/app_name"
+            android:layout_marginTop="24dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- "Registration" badge -->
+        <TextView
+            android:id="@+id/tvBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registration"
+            android:textStyle="bold"
+            android:textColor="@color/brandBlueDark"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/imgLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- White card -->
+        <LinearLayout
+            android:id="@+id/card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvBadge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Username -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username*"
+                android:textColor="@color/textDark"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Enter username"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/hintGrey"
+                android:backgroundTint="@color/brandBlueLight" />
+
+            <View android:layout_width="match_parent" android:layout_height="10dp"/>
+
+            <!-- Email -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email*"
+                android:textColor="@color/textDark"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Enter email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/hintGrey"
+                android:backgroundTint="@color/brandBlueLight" />
+
+            <View android:layout_width="match_parent" android:layout_height="10dp"/>
+
+            <!-- Password -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password*"
+                android:textColor="@color/textDark"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Enter password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/hintGrey"
+                android:backgroundTint="@color/brandBlueLight" />
+
+            <View android:layout_width="match_parent" android:layout_height="10dp"/>
+
+            <!-- Confirm Password -->
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirm Password*"
+                android:textColor="@color/textDark"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/etConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Re-enter password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/hintGrey"
+                android:backgroundTint="@color/brandBlueLight" />
+
+            <View android:layout_width="match_parent" android:layout_height="12dp"/>
+
+            <!-- Role -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Role*"
+                android:textColor="@color/textDark"
+                android:textSize="12sp"/>
+
+            <RadioGroup
+                android:id="@+id/rgRole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/rbAdmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Admin"
+                    android:layout_marginStart="24dp"/>
+            </RadioGroup>
+
+            <!-- Admin Access Code (used only if Admin selected) -->
+            <EditText
+                android:id="@+id/etAdminCode"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Admin Access Code"
+                android:inputType="textPassword"
+                android:textColorHint="@color/hintGrey"
+                android:backgroundTint="@color/brandBlueLight"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Register button -->
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="@color/textLight"
+                android:background="@drawable/btn_primary"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Login link -->
+            <TextView
+                android:id="@+id/tvLoginHere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? Login here"
+                android:textSize="12sp"
+                android:textColor="@color/brandBlueLight"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
